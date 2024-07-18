@@ -1,5 +1,5 @@
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /app/chawkbaza
 
 # Copy the package.json and package-lock.json files to the working directory
 COPY package*.json ./
