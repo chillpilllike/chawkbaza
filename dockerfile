@@ -6,6 +6,8 @@ WORKDIR /app
 # Copy the package.json and package-lock.json files to the working directory
 COPY package*.json ./
 
+RUN apt-get update && apt-get install -y git nano
+
 # Install the dependencies
 RUN npm install
 
