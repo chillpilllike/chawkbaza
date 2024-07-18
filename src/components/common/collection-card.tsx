@@ -42,8 +42,8 @@ const CollectionCard: React.FC<Props> = ({
           <Image
             src={image ?? '/assets/placeholder/collection.svg'}
             alt={t('title') || t('text-card-thumbnail')}
-            width={imgWidth}
-            height={imgHeight}
+            width={typeof imgWidth === 'string' ? parseInt(imgWidth) : imgWidth}
+            height={typeof imgHeight === 'string' ? parseInt(imgHeight) : imgHeight}
             className="bg-gray-300 object-cover sm:rounded-md transition duration-200 ease-in-out group-hover:opacity-90"
           />
         </div>
