@@ -7,6 +7,10 @@ RUN apt-get update && apt-get install -y git
 # Set the working directory in the container
 WORKDIR /app
 
+RUN git clone https://github.com/chillpilllike/chawkbaza.git
+
+WORKDIR /app/chawkbaza
+
 COPY package*.json ./
 
 RUN yarn build
